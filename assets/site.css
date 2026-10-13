@@ -887,3 +887,11 @@ h2 { font-size: clamp(36px, 4.1vw, 56px); line-height: 1.07; letter-spacing: -0.
     radial-gradient(ellipse 45% 60% at 82% 30%, rgba(201, 138, 0, 0.10), transparent 70%),
     radial-gradient(ellipse 35% 40% at 8% 0%, rgba(201, 138, 0, 0.05), transparent 70%);
 }
+
+/* Code source sur GitHub, à la place de l'ancien badge « En développement » (l'avertissement reste dans la section Projet et le pied de page). */
+.gh-link { height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line-2); border-radius: 10px; color: var(--muted); font-weight: 600; font-size: 14px; white-space: nowrap; transition: color 0.2s, border-color 0.2s; }
+.gh-link:hover { color: var(--text); border-color: var(--hover-line); }
+.gh-link svg { flex: none; }
+@media (min-width: 1400px) and (max-width: 1599px) { .gh-link { padding: 0 12px; } }
+/* Téléphones : masqué comme l'ancien badge, faute de place ; le lien reste dans la section Projet et le pied de page. */
+@media (max-width: 640px) { .gh-link { display: none; } }
