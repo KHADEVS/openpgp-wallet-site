@@ -11,9 +11,6 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="alternate" hreflang="fr" href="frost.html">
 <link rel="alternate" hreflang="en" href="frost-en.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 <style>
   :root {
@@ -25,8 +22,8 @@
     --accent-soft: rgba(124, 147, 255, 0.14);
     --warn: #ffb648;
     --gutter: clamp(20px, 5vw, 64px);
-    --font-display: 'Space Grotesk', 'IBM Plex Sans', system-ui, sans-serif;
-    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   }
 
   /* Passage en fondu entre les pages du site (navigateurs qui le prennent en charge). */
@@ -84,7 +81,7 @@
   .split {
     display: flex; align-items: center;
     font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
-    font-size: clamp(24px, 8.4vw, 112px); line-height: 1; letter-spacing: -0.01em;
+    font-size: clamp(24px, 7.4vw, 100px); line-height: 1; letter-spacing: -0.02em;
     cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent;
   }
   .part { display: inline-block; white-space: nowrap; }

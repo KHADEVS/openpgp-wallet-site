@@ -1,3 +1,9 @@
+/* Fonts are self-hosted (assets/fonts/, OFL licenses next to them): no request to a
+   third-party font service. Inter for text and headings, IBM Plex Mono for keys and
+   addresses. */
+@font-face { font-family: 'Inter'; src: url('fonts/Inter-latin.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; src: url('fonts/Inter-latin-ext.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'IBM Plex Mono'; src: url('fonts/IBMPlexMono-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
 /* Feuille commune du site (français et anglais, pages principales et
    « sécurité en détail »). Les pages FROST gardent leur propre style. */
 :root {
@@ -16,8 +22,8 @@
   --warn: #ffb648;
   --maxw: 1200px;
   --gutter: clamp(20px, 5vw, 64px);
-  --font-display: 'Space Grotesk', 'IBM Plex Sans', system-ui, sans-serif;
-  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   /* Variables de thème (sombre ici, claires dans :root[data-theme="light"]). */
   --on-accent: #060708;
@@ -137,7 +143,7 @@ section[id] { scroll-margin-top: 72px; }
 .eyebrow::before { content: ""; width: 24px; height: 1px; background: currentColor; opacity: 0.6; }
 .eyebrow .num { font-family: var(--font-mono); color: var(--accent); letter-spacing: 0.04em; }
 .eyebrow .new { color: var(--ok); }
-h1 { font-size: clamp(44px, 4.9vw, 72px); line-height: 1.04; letter-spacing: -0.036em; margin-top: 22px; text-wrap: balance; }
+h1 { font-size: clamp(44px, 4.9vw, 72px); line-height: 1.04; letter-spacing: -0.024em; margin-top: 22px; text-wrap: balance; }
 h1 .strike { position: relative; color: var(--dim); white-space: nowrap; }
 h1 .strike::after {
   content: ""; position: absolute; left: -2%; right: -2%; top: 54%; height: 0.07em; border-radius: 1em;
@@ -177,7 +183,7 @@ h1 .strike::after {
 .strip-inner { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(180deg, var(--glass-1), var(--glass-2)); }
 .stat { padding: 32px 30px; }
 .stat + .stat { border-left: 1px solid var(--line); }
-.stat-k { font-family: var(--font-display); font-weight: 700; font-size: clamp(36px, 3.4vw, 48px); letter-spacing: -0.03em; line-height: 1; }
+.stat-k { font-family: var(--font-display); font-weight: 700; font-size: clamp(36px, 3.4vw, 48px); letter-spacing: -0.022em; line-height: 1; }
 .stat-l { margin-top: 12px; font-size: 16.5px; line-height: 1.5; color: var(--muted); }
 
 /* ===== Sections ===== */
@@ -189,7 +195,7 @@ h1 .strike::after {
 .feature { min-height: 92vh; display: flex; align-items: center; padding: 110px var(--gutter); }
 .feature-inner { width: 100%; max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 110px); align-items: center; }
 .feature.reverse .feature-copy { order: 2; }
-h2 { font-size: clamp(36px, 4.1vw, 56px); line-height: 1.07; letter-spacing: -0.032em; margin-top: 18px; max-width: 640px; text-wrap: balance; }
+h2 { font-size: clamp(36px, 4.1vw, 56px); line-height: 1.07; letter-spacing: -0.022em; margin-top: 18px; max-width: 640px; text-wrap: balance; }
 .lead { font-size: 19.5px; line-height: 1.7; color: var(--muted); margin-top: 22px; max-width: 560px; text-wrap: pretty; }
 .feature-visual { display: flex; justify-content: center; }
 
@@ -385,7 +391,7 @@ h2 { font-size: clamp(36px, 4.1vw, 56px); line-height: 1.07; letter-spacing: -0.
 
 /* ===== 07 — Privacy is normal ===== */
 .privacy { position: relative; border-top: 1px solid var(--line); background: radial-gradient(ellipse 55% 60% at 85% 20%, rgba(244, 183, 40, 0.07), transparent 70%), var(--bg); }
-.privacy-title { font-size: clamp(44px, 5.4vw, 76px); letter-spacing: -0.04em; line-height: 1.02; }
+.privacy-title { font-size: clamp(44px, 5.4vw, 76px); letter-spacing: -0.028em; line-height: 1.02; }
 /* « normal. » en doré, clin d'œil au slogan de la communauté Zcash. */
 .privacy-word { background: linear-gradient(90deg, #f4b728, #ffd36e); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .ledgers { width: 100%; max-width: 470px; display: flex; flex-direction: column; gap: 14px; }
@@ -434,7 +440,7 @@ h2 { font-size: clamp(36px, 4.1vw, 56px); line-height: 1.07; letter-spacing: -0.
 .phone-app { text-align: center; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); }
 .phone-title { margin-top: 12px; text-align: center; font-family: var(--font-display); font-weight: 700; font-size: 25px; letter-spacing: -0.01em; }
 .phone-sub { text-align: center; font-size: 15px; color: var(--dim); }
-.phone-amount { margin-top: 30px; text-align: center; font-family: var(--font-display); font-weight: 700; font-size: 42px; letter-spacing: -0.03em; line-height: 1.1; }
+.phone-amount { margin-top: 30px; text-align: center; font-family: var(--font-display); font-weight: 700; font-size: 42px; letter-spacing: -0.022em; line-height: 1.1; }
 .phone-amount span { display: block; margin-top: 6px; font-family: var(--font-mono); font-weight: 400; font-size: 14.5px; letter-spacing: 0; color: var(--muted); }
 .phone-lines { margin-top: 28px; display: flex; flex-direction: column; gap: 8px; }
 .phone-lines div { display: flex; justify-content: space-between; padding: 13px 15px; border-radius: 14px; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--line); font-size: 15px; }
