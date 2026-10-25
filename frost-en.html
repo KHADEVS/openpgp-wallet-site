@@ -192,7 +192,7 @@
       <span class="slash" aria-hidden="true"></span>
       <span class="part right gold" aria-hidden="true">the signature</span>
     </div>
-    <p class="frost-soon">Coming soon</p>
+    <p class="frost-soon">Prototype on mainnet</p>
   </div>
   <a class="scroll-hint" href="#frost-idea" aria-label="Scroll down">
     <span>Learn more</span>
@@ -230,8 +230,8 @@
   <div class="feature-inner">
     <div class="feature-copy">
       <span class="eyebrow"><span class="num">02</span> Why</span>
-      <h2>A Ledger's protection, <span class="gold">with the phone you already own.</span></h2>
-      <p class="lead">The one limit of a software wallet is a computer that's already infected. Hardware wallets solve it with a separate device and its own screen. FROST offers the same guarantee without buying anything: your phone becomes the second device and the trusted screen.</p>
+      <h2>A second device you can trust, <span class="gold">with the phone you already own.</span></h2>
+      <p class="lead">The one limit of a software wallet is a computer that's already infected. Hardware wallets solve it with a separate device and its own screen. FROST brings that second device and that trusted screen without buying anything: your phone. A phone has no secure chip like a hardware wallet, but malware on the computer alone can no longer move your funds.</p>
       <ul class="ticks">
         <li>The phone shows the real recipient and the real amount, even if the computer lies.</li>
         <li>You approve at a glance (Face ID or fingerprint): nothing more to do than today.</li>
@@ -303,15 +303,15 @@
       </div>
       <div class="shield reveal" style="--d: 0.1s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
-        <div><h3>The Zcash Foundation's implementation</h3><p>Its open-source Rust libraries, which we'll use as is, checked against the official test vectors.</p></div>
+        <div><h3>The Zcash Foundation's implementation</h3><p>Its open-source Rust libraries, used as is by the prototype and checked against the official test vectors.</p></div>
       </div>
       <div class="shield reveal" style="--d: 0.15s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9h6l-6 6h6"/></svg></span>
-        <div><h3>Already in the Zcash ecosystem</h3><p>The app already uses Zcash's official library (librustzcash) for transparent and shielded (Orchard) Zcash.</p></div>
+        <div><h3>Already in the Zcash ecosystem</h3><p>The app already uses Zcash's official library (librustzcash) for transparent and shielded (Ironwood) Zcash.</p></div>
       </div>
       <div class="shield reveal" style="--d: 0.2s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-        <div><h3>First networks targeted</h3><p>Shielded Zcash, Solana, NEAR, Stellar and Bitcoin (Taproot addresses): all use Schnorr-type signatures, the kind FROST produces.</p></div>
+        <div><h3>Shielded Zcash first</h3><p>The work starts with shielded Zcash. Solana, NEAR, Stellar and Bitcoin (Taproot addresses) also use Schnorr-type signatures, the kind FROST produces: they could follow later, funded separately.</p></div>
       </div>
       <div class="shield reveal" style="--d: 0.25s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span>
@@ -319,7 +319,7 @@
       </div>
       <div class="shield reveal" style="--d: 0.3s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>
-        <div><h3>Without touching what works</h3><p>FROST will be developed separately, in an isolated module: the current wallet and its backup will stay as they are throughout the research.</p></div>
+        <div><h3>Without touching what works</h3><p>FROST is developed separately, first in a standalone prototype: the current wallet and its backup stay as they are throughout the research.</p></div>
       </div>
     </div>
   </div>
@@ -329,11 +329,12 @@
 <section class="status" id="frost-status">
   <div class="status-inner">
     <span class="eyebrow"><span class="num">05</span> Where we stand</span>
-    <h2>Design settled. <span class="gold">Development ahead.</span></h2>
+    <h2>Design published. <span class="gold">Prototype on mainnet.</span></h2>
     <div class="roadmap">
-      <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Design: devices, covered networks and pairing channel chosen</span></div>
-      <div class="step next reveal" style="--d: 0.12s"><span class="step-badge next">1</span><span><strong>Isolated research module</strong>, with the phone simulated by a second program, checked against the official vectors</span></div>
-      <div class="step reveal" style="--d: 0.19s"><span class="step-badge todo">2</span><span>QR-code pairing and an end-to-end encrypted channel between the computer and the phone</span></div>
+      <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Design published in the <a href="frost-white-paper.html">white paper</a>: devices, pairing channel and transaction checks</span></div>
+      <div class="step reveal" style="--d: 0.12s"><span class="step-badge done">✓</span><span><strong>Research prototype</strong> (<a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>): three 2-of-3 spends on mainnet on October 15, 2026, two of them with a co-signer that checks the transaction itself before signing</span></div>
+      <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">1</span><span><strong>In the wallet:</strong> QR-code pairing and an end-to-end encrypted channel between the computer and the phone</span></div>
+      <div class="step reveal" style="--d: 0.23s"><span class="step-badge todo">2</span><span>A common backup format for FROST wallets, written as a ZIP</span></div>
       <div class="step reveal" style="--d: 0.26s"><span class="step-badge todo">3</span><span>Mobile app: show the request, approve at a glance</span></div>
       <div class="step reveal" style="--d: 0.33s"><span class="step-badge todo">4</span><span>Independent security audit, before any use with real funds</span></div>
     </div>

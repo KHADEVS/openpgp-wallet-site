@@ -438,7 +438,7 @@
         <div class="card reveal" style="--d: 0.05s">
           <span class="card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9h6l-6 6h6"/></svg></span>
           <h3>Shielded Zcash</h3>
-          <p>Amount, sender and recipient encrypted on the blockchain (Orchard). Shield your transparent ZEC in one click.</p>
+          <p>Amount, sender and recipient encrypted on the blockchain (Ironwood). Shield your transparent ZEC in one click.</p>
         </div>
         <div class="card reveal" style="--d: 0.11s">
           <span class="card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8.3-8 9-4.8-.7-8-4.5-8-9V6z"/><path d="M9 12h6"/></svg></span>
@@ -489,7 +489,7 @@
         <p class="lead">Today, the backup is split into three pieces. With FROST, every send will be signed jointly: your computer and your phone each produce their share of the signature, without ever bringing the key together. Malware on the computer will no longer be enough to move your funds.</p>
         <ul class="ticks">
           <li><strong>The whole key no longer exists anywhere</strong>, neither on the computer nor on the phone, not even while signing.</li>
-          <li>Your phone shows the recipient and the amount, and you approve at a glance: a Ledger's trusted screen, with the device already in your pocket.</li>
+          <li>Your phone shows the recipient and the amount, and you approve at a glance: a trusted screen, as with a hardware wallet, on the device already in your pocket.</li>
           <li>A public protocol, standardized by the IETF (RFC 9591), with an open-source Rust implementation developed by the <strong>Zcash Foundation</strong>: we'll reuse it rather than reinvent cryptography.</li>
           <li>Planned first for shielded Zcash, Solana, NEAR, Stellar and Bitcoin (Taproot addresses).</li>
         </ul>
@@ -564,7 +564,7 @@
         <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Cryptographic core (backup, encryption, signatures): done</span></div>
         <div class="step reveal" style="--d: 0.08s"><span class="step-badge done">✓</span><span>Source code published under the MIT license: <a href="https://github.com/OpenPGP-Wallet/openpgp-wallet" target="_blank" rel="noopener">on GitHub</a>, open for anyone to review</span></div>
         <div class="step reveal" style="--d: 0.12s"><span class="step-badge doing">●</span><span>Complete Windows app (sends, swaps, staking, tokenized stocks, Ledger and Trezor, WalletConnect, Monero, shielded Zcash): being polished</span></div>
-        <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">→</span><span><strong>Next big step: <a href="frost-en.html">FROST</a></strong>, a signature shared between your computer and your phone, with the mobile app that goes with it: design settled, development ahead</span></div>
+        <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">→</span><span><strong>Next big step: <a href="frost-en.html">FROST</a></strong>, a signature shared between your computer and your phone, with the mobile app that goes with it: a research prototype already signs on mainnet, wallet integration ahead</span></div>
         <div class="step reveal" style="--d: 0.26s"><span class="step-badge todo">○</span><span>Independent security audit and code signing: not done yet</span></div>
         <div class="step reveal" style="--d: 0.33s"><span class="step-badge todo">○</span><span>Public release recommended for real funds: once the audit and code signing are done</span></div>
       </div>

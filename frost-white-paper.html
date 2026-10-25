@@ -39,13 +39,13 @@
   <section class="guide-hero paper-hero">
     <div class="guide-inner">
       <a class="back" href="frost-en.html">← Back to FROST</a>
-      <div class="guide-eyebrow"><span class="eyebrow"><span class="num">v0.2</span> White paper</span></div>
+      <div class="guide-eyebrow"><span class="eyebrow"><span class="num">v0.3</span> White paper</span></div>
       <h1>FROST for shielded ZEC, <span class="gold">in the Ironwood pool.</span></h1>
       <p class="lead">How OpenPGP Wallet will remove the weak spot of a wallet that signs on a single device: the key that authorizes spending is shared between your computer, your phone and an encrypted offline backup, and is never rebuilt, not even when signing.</p>
-      <p class="paper-meta">Khadim · October 2026 · 8 pages · PDF</p>
+      <p class="paper-meta">Khadim · October 2026 · 10 pages · PDF</p>
       <div class="cta">
-        <a class="btn btn-primary" href="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.2.pdf" target="_blank" rel="noopener">Read the white paper</a>
-        <a class="btn btn-ghost" href="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.2.pdf" download>Download (PDF, 96 KB)</a>
+        <a class="btn btn-primary" href="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.3.pdf" target="_blank" rel="noopener">Read the white paper</a>
+        <a class="btn btn-ghost" href="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.3.pdf" download>Download (PDF, 78 KB)</a>
       </div>
     </div>
   </section>
@@ -76,7 +76,7 @@
         </div>
         <div class="shield reveal" style="--d: 0.25s">
           <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
-          <div><h3>Built on Zcash standards</h3><p>ZIP 312 (FROST for spend authorization), ZIP 374 (partially created transactions) and the Zcash Foundation's FROST libraries. The signing messages and backups become an open specification any wallet can use.</p></div>
+          <div><h3>Built on Zcash standards</h3><p>ZIP 312 (FROST for spend authorization), ZIP 374 (partially created transactions), ZIP 2005 (quantum recoverability) and the Zcash Foundation's FROST libraries. The signing messages become an open specification, and the backup format a ZIP, for any wallet to use.</p></div>
         </div>
         <div class="shield reveal" style="--d: 0.3s">
           <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
@@ -87,7 +87,7 @@
         <span class="honest-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg></span>
         <div>
           <h3>Where we stand</h3>
-          <p>Nothing described here is implemented yet, and nothing has been reviewed by an independent auditor. This document sets out the design so it can be discussed in public.</p>
+          <p>A standalone prototype, <a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>, made three 2-of-3 spends on mainnet on October 15, 2026. FROST is not in the wallet yet, and nothing has been reviewed by an independent auditor. This document sets out the design so it can be discussed in public.</p>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@
   <!-- ===== The document ===== -->
   <section class="section paper-doc" id="paper">
     <div class="section-inner">
-      <iframe class="paper-frame" src="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.2.pdf#view=FitH" title="FROST white paper (PDF)" loading="lazy"></iframe>
+      <iframe class="paper-frame" src="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.3.pdf#view=FitH" title="FROST white paper (PDF)" loading="lazy"></iframe>
     </div>
   </section>
 </main>

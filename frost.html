@@ -192,7 +192,7 @@
       <span class="slash" aria-hidden="true"></span>
       <span class="part right gold" aria-hidden="true">la signature</span>
     </div>
-    <p class="frost-soon" lang="en">Coming soon</p>
+    <p class="frost-soon">Prototype sur le réseau principal</p>
   </div>
   <a class="scroll-hint" href="#frost-idea" aria-label="Faire défiler">
     <span>Comprendre</span>
@@ -230,8 +230,8 @@
   <div class="feature-inner">
     <div class="feature-copy">
       <span class="eyebrow"><span class="num">02</span> Pourquoi</span>
-      <h2>La protection d'un Ledger, <span class="gold">avec le téléphone que vous avez déjà.</span></h2>
-      <p class="lead">La seule limite d'un portefeuille logiciel, c'est un ordinateur déjà infecté. Les portefeuilles matériels la règlent avec un appareil séparé et son propre écran. FROST offre la même garantie sans rien acheter : votre téléphone devient le second appareil et l'écran de confiance.</p>
+      <h2>Un second appareil de confiance, <span class="gold">avec le téléphone que vous avez déjà.</span></h2>
+      <p class="lead">La seule limite d'un portefeuille logiciel, c'est un ordinateur déjà infecté. Les portefeuilles matériels la règlent avec un appareil séparé et son propre écran. FROST apporte ce second appareil et cet écran de confiance sans rien acheter : votre téléphone. Un téléphone n'a pas la puce sécurisée d'un portefeuille matériel, mais un virus sur l'ordinateur ne suffit plus, à lui seul, pour déplacer vos fonds.</p>
       <ul class="ticks">
         <li>Le téléphone affiche le vrai destinataire et le vrai montant, même si l'ordinateur ment.</li>
         <li>Vous validez d'un regard (Face ID ou empreinte) : rien de plus à faire qu'aujourd'hui.</li>
@@ -303,15 +303,15 @@
       </div>
       <div class="shield reveal" style="--d: 0.1s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
-        <div><h3>L'implémentation de la Zcash Foundation</h3><p>Ses bibliothèques open source en Rust, que nous utiliserons telles quelles, vérifiées contre les vecteurs de test officiels.</p></div>
+        <div><h3>L'implémentation de la Zcash Foundation</h3><p>Ses bibliothèques open source en Rust, utilisées telles quelles par le prototype et vérifiées contre les vecteurs de test officiels.</p></div>
       </div>
       <div class="shield reveal" style="--d: 0.15s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9h6l-6 6h6"/></svg></span>
-        <div><h3>Déjà dans l'écosystème Zcash</h3><p>L'app utilise déjà la bibliothèque officielle de Zcash (librustzcash) pour Zcash transparent et protégé (Orchard).</p></div>
+        <div><h3>Déjà dans l'écosystème Zcash</h3><p>L'app utilise déjà la bibliothèque officielle de Zcash (librustzcash) pour Zcash transparent et protégé (Ironwood).</p></div>
       </div>
       <div class="shield reveal" style="--d: 0.2s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-        <div><h3>Réseaux visés en premier</h3><p>Zcash protégé, Solana, NEAR, Stellar et Bitcoin (adresses Taproot) : tous utilisent des signatures de type Schnorr, celles que FROST produit.</p></div>
+        <div><h3>Zcash protégé d'abord</h3><p>Le travail commence par Zcash protégé. Solana, NEAR, Stellar et Bitcoin (adresses Taproot) utilisent aussi des signatures de type Schnorr, celles que FROST produit : ils pourront suivre plus tard, avec un financement séparé.</p></div>
       </div>
       <div class="shield reveal" style="--d: 0.25s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span>
@@ -319,7 +319,7 @@
       </div>
       <div class="shield reveal" style="--d: 0.3s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>
-        <div><h3>Sans toucher à ce qui marche</h3><p>FROST sera développé à part, dans un module isolé : le portefeuille actuel et sa sauvegarde resteront tels quels pendant toute la recherche.</p></div>
+        <div><h3>Sans toucher à ce qui marche</h3><p>FROST est développé à part, d'abord dans un prototype indépendant : le portefeuille actuel et sa sauvegarde restent tels quels pendant toute la recherche.</p></div>
       </div>
     </div>
   </div>
@@ -329,11 +329,12 @@
 <section class="status" id="frost-status">
   <div class="status-inner">
     <span class="eyebrow"><span class="num">05</span> Où on en est</span>
-    <h2>Phase de conception achevée. <span class="gold">Place au développement.</span></h2>
+    <h2>Conception publiée. <span class="gold">Prototype sur le réseau principal.</span></h2>
     <div class="roadmap">
-      <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Conception : appareils, réseaux couverts et canal d'appairage choisis</span></div>
-      <div class="step next reveal" style="--d: 0.12s"><span class="step-badge next">1</span><span><strong>Module de recherche isolé</strong>, téléphone simulé par un second programme, vérifié contre les vecteurs officiels</span></div>
-      <div class="step reveal" style="--d: 0.19s"><span class="step-badge todo">2</span><span>Appairage par QR code et canal chiffré de bout en bout entre l'ordinateur et le téléphone</span></div>
+      <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Conception publiée dans le <a href="frost-livre-blanc.html">livre blanc</a> : appareils, canal d'appairage et vérifications de la transaction</span></div>
+      <div class="step reveal" style="--d: 0.12s"><span class="step-badge done">✓</span><span><strong>Prototype de recherche</strong> (<a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>) : trois dépenses 2 sur 3 sur le réseau principal le 15 octobre 2026, dont deux avec un co-signataire qui vérifie lui-même la transaction avant de signer</span></div>
+      <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">1</span><span><strong>Dans le portefeuille :</strong> appairage par QR code et canal chiffré de bout en bout entre l'ordinateur et le téléphone</span></div>
+      <div class="step reveal" style="--d: 0.23s"><span class="step-badge todo">2</span><span>Un format de sauvegarde commun aux portefeuilles FROST, rédigé sous forme de ZIP</span></div>
       <div class="step reveal" style="--d: 0.26s"><span class="step-badge todo">3</span><span>Application mobile : afficher la demande, valider d'un regard</span></div>
       <div class="step reveal" style="--d: 0.33s"><span class="step-badge todo">4</span><span>Audit de sécurité indépendant, avant toute utilisation avec de vrais fonds</span></div>
     </div>
