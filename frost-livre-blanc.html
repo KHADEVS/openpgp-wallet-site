@@ -39,13 +39,13 @@
   <section class="guide-hero paper-hero">
     <div class="guide-inner">
       <a class="back" href="frost.html">← Retour à FROST</a>
-      <div class="guide-eyebrow"><span class="eyebrow"><span class="num">v0.4</span> Livre blanc</span></div>
+      <div class="guide-eyebrow"><span class="eyebrow"><span class="num">v0.5</span> Livre blanc</span></div>
       <h1>FROST pour le ZEC protégé, <span class="gold">dans le pool Ironwood.</span></h1>
       <p class="lead">Comment OpenPGP Wallet va supprimer le point faible d'un portefeuille qui signe sur un seul appareil : la clé qui autorise les dépenses est partagée entre votre ordinateur, votre téléphone et une sauvegarde chiffrée hors ligne, et n'est jamais reconstituée, même au moment de signer.</p>
-      <p class="paper-meta">Khadim · octobre 2026 · 10 pages · <span lang="en">PDF</span> en anglais</p>
+      <p class="paper-meta">Khadim · novembre 2026 · 13 pages · <span lang="en">PDF</span> en anglais</p>
       <div class="cta">
-        <a class="btn btn-primary" href="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.4.pdf" target="_blank" rel="noopener">Lire le livre blanc</a>
-        <a class="btn btn-ghost" href="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.4.pdf" download>Télécharger (PDF, 80 Ko)</a>
+        <a class="btn btn-primary" href="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.5.pdf" target="_blank" rel="noopener">Lire le livre blanc</a>
+        <a class="btn btn-ghost" href="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.5.pdf" download>Télécharger (PDF, 90 Ko)</a>
       </div>
     </div>
   </section>
@@ -87,7 +87,7 @@
         <span class="honest-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg></span>
         <div>
           <h3>Où on en est</h3>
-          <p>Un prototype indépendant, <a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>, a fait trois dépenses 2 sur 3 sur le réseau principal le 15 octobre 2026. Le format de sauvegarde est maintenant un <a href="https://github.com/KHADEVS/zips/blob/draft-khadim-aryaethn-frost-member-backup/zips/draft-khadim-aryaethn-frost-member-backup.md" target="_blank" rel="noopener">brouillon de ZIP</a>, co-écrit avec aryaethn, et deux implémentations passent déjà ses vecteurs de test. FROST n'est pas encore dans le portefeuille, et rien n'a été relu par un auditeur indépendant. Ce document présente la conception, pour qu'elle puisse être discutée publiquement.</p>
+          <p>Depuis la version 2.16.0 (11 novembre 2026), l'application Windows du portefeuille a un onglet FROST : elle crée un compte 2 sur 3 avec un co-signataire par QR codes, coordonne les dépenses et, depuis la 2.18.0, restaure un compte à partir de son fichier de sauvegarde. Pour l'instant, le co-signataire est l'outil de test pour ordinateur de <a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>, la bibliothèque de référence de la spécification ; l'application pour téléphone est la prochaine phase. Des dépenses et un exercice de restauration ont eu lieu sur le réseau principal, avec de petits montants. Le format de sauvegarde est proposé comme ZIP sur zcash/zips (<a href="https://github.com/zcash/zips/pull/1432" target="_blank" rel="noopener">#1432</a>), co-écrit avec aryaethn, et deux implémentations passent ses vecteurs de test. Rien n'a été relu par un auditeur indépendant, et sur l'ordinateur la part dépend encore du coffre OpenPGP du portefeuille, un point que la section 8 explique et que nous allons corriger. Ce document présente la conception, pour qu'elle puisse être discutée publiquement.</p>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@
   <!-- ===== Le document ===== -->
   <section class="section paper-doc" id="paper">
     <div class="section-inner">
-      <iframe class="paper-frame" src="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.4.pdf#view=FitH" title="Livre blanc FROST (PDF, en anglais)" loading="lazy"></iframe>
+      <iframe class="paper-frame" src="docs/OpenPGP-Wallet-FROST-Ironwood-White-Paper-v0.5.pdf#view=FitH" title="Livre blanc FROST (PDF, en anglais)" loading="lazy"></iframe>
     </div>
   </section>
 </main>
