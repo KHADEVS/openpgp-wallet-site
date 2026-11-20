@@ -192,7 +192,7 @@
       <span class="slash" aria-hidden="true"></span>
       <span class="part right gold" aria-hidden="true">the signature</span>
     </div>
-    <p class="frost-soon">Prototype on mainnet</p>
+    <p class="frost-soon">In the wallet since v2.16</p>
   </div>
   <a class="scroll-hint" href="#frost-idea" aria-label="Scroll down">
     <span>Learn more</span>
@@ -251,7 +251,7 @@
             <div><span>Recipient</span><b>u1qh…7x4e</b></div>
             <div><span>Fee</span><b>0.0001 ZEC</b></div>
           </div>
-          <div class="phone-signed">✓ Your computer has already signed its share</div>
+          <div class="phone-signed">✓ Checked by this phone itself</div>
           <div class="phone-btn">Approve with Face ID</div>
           <div class="phone-cancel">Decline</div>
         </div>
@@ -277,12 +277,12 @@
       <div class="step-card reveal" style="--d: 0.15s">
         <span class="step-num">2</span>
         <h3>Request</h3>
-        <p>You prepare a send on the computer, just like today. It signs its share and sends the request to the phone.</p>
+        <p>You prepare a send on the computer, just like today. It passes the transaction to the phone in encrypted QR codes.</p>
       </div>
       <div class="step-card reveal" style="--d: 0.25s">
         <span class="step-num">3</span>
         <h3>Approve</h3>
-        <p>The phone shows the send, you approve it at a glance, it signs its share. The two shares form an ordinary signature, accepted by the network.</p>
+        <p>The phone checks the send on its own and shows it; you approve it at a glance and it signs its share. The computer adds its own: together they form an ordinary signature, accepted by the network.</p>
       </div>
     </div>
   </div>
@@ -303,7 +303,7 @@
       </div>
       <div class="shield reveal" style="--d: 0.1s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
-        <div><h3>The Zcash Foundation's implementation</h3><p>Its open-source Rust libraries, used as is by the prototype and checked against the official test vectors.</p></div>
+        <div><h3>The Zcash Foundation's implementation</h3><p>Its open-source Rust libraries, used as is by frost-zec and the wallet, and checked against the official test vectors.</p></div>
       </div>
       <div class="shield reveal" style="--d: 0.15s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9h6l-6 6h6"/></svg></span>
@@ -319,7 +319,7 @@
       </div>
       <div class="shield reveal" style="--d: 0.3s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>
-        <div><h3>Without touching what works</h3><p>FROST is developed separately, first in a standalone prototype: the current wallet and its backup stay as they are throughout the research.</p></div>
+        <div><h3>Without touching what works</h3><p>A FROST account is a separate account, in its own tab: your other accounts and the wallet's backup stay as they are, and the FROST protocol lives in its own crate, frost-zec.</p></div>
       </div>
     </div>
   </div>
@@ -329,14 +329,16 @@
 <section class="status" id="frost-status">
   <div class="status-inner">
     <span class="eyebrow"><span class="num">05</span> Where we stand</span>
-    <h2>Design published. <span class="gold">Prototype on mainnet.</span></h2>
+    <h2>In the wallet. <span class="gold">The phone app comes next.</span></h2>
     <div class="roadmap">
-      <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Design published in the <a href="frost-white-paper.html">white paper</a>: devices, pairing channel and transaction checks</span></div>
-      <div class="step reveal" style="--d: 0.12s"><span class="step-badge done">✓</span><span><strong>Research prototype</strong> (<a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>): three 2-of-3 spends on mainnet on October 15, 2026, two of them with a co-signer that checks the transaction itself before signing</span></div>
-      <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">1</span><span><strong>In the wallet:</strong> QR-code pairing and an end-to-end encrypted channel between the computer and the phone</span></div>
-      <div class="step next reveal" style="--d: 0.23s"><span class="step-badge next">2</span><span><strong>Backup format as a ZIP:</strong> <a href="https://github.com/KHADEVS/zips/blob/draft-khadim-aryaethn-frost-member-backup/zips/draft-khadim-aryaethn-frost-member-backup.md" target="_blank" rel="noopener">draft public</a>, co-owned with aryaethn, with two implementations passing its test vectors</span></div>
-      <div class="step reveal" style="--d: 0.26s"><span class="step-badge todo">3</span><span>Mobile app: show the request, approve at a glance</span></div>
-      <div class="step reveal" style="--d: 0.33s"><span class="step-badge todo">4</span><span>Independent security audit, before any use with real funds</span></div>
+      <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Design published in the <a href="frost-white-paper.html">white paper</a> (v0.5): devices, pairing channel, transaction checks and how the shares are stored</span></div>
+      <div class="step reveal" style="--d: 0.1s"><span class="step-badge done">✓</span><span><strong>Research prototype</strong> (<a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>): three 2-of-3 spends on mainnet on October 15, 2026, two of them with a co-signer that checks the transaction itself before signing</span></div>
+      <div class="step reveal" style="--d: 0.15s"><span class="step-badge done">✓</span><span><strong>In the wallet</strong> (Windows, v2.16.0, November 11, 2026): a FROST tab that pairs over QR codes through an end-to-end encrypted channel, creates the 2-of-3 account and coordinates spends; recovery from the backup file since v2.18.0. For now the co-signer is the desktop test tool of frost-zec</span></div>
+      <div class="step reveal" style="--d: 0.2s"><span class="step-badge done">✓</span><span><strong>Open specification</strong> (v1.2) and the <a href="https://crates.io/crates/frost-zec" target="_blank" rel="noopener">frost-zec crate</a> on crates.io; on November 9, 2026, a vault shared with a Zafe user spent on mainnet in both directions</span></div>
+      <div class="step next reveal" style="--d: 0.25s"><span class="step-badge next">1</span><span><strong>Backup format as a ZIP:</strong> open on zcash/zips (<a href="https://github.com/zcash/zips/pull/1432" target="_blank" rel="noopener">#1432</a>), co-owned with aryaethn, with two implementations passing its test vectors</span></div>
+      <div class="step next reveal" style="--d: 0.3s"><span class="step-badge next">2</span><span><strong>Computer share:</strong> a protection that no longer depends on the wallet's OpenPGP vault (<a href="frost-white-paper.html">white paper</a>, section 8)</span></div>
+      <div class="step reveal" style="--d: 0.35s"><span class="step-badge todo">3</span><span>Mobile app, Android then iPhone: check the request, approve at a glance</span></div>
+      <div class="step reveal" style="--d: 0.4s"><span class="step-badge todo">4</span><span>Independent security audit, before any use beyond small amounts</span></div>
     </div>
     <div class="cta" style="justify-content: center; margin-top: 48px;">
       <a class="btn btn-primary" href="frost-white-paper.html">Read the white paper</a>

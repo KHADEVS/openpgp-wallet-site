@@ -192,7 +192,7 @@
       <span class="slash" aria-hidden="true"></span>
       <span class="part right gold" aria-hidden="true">la signature</span>
     </div>
-    <p class="frost-soon">Prototype sur le réseau principal</p>
+    <p class="frost-soon">Intégré depuis la v2.16</p>
   </div>
   <a class="scroll-hint" href="#frost-idea" aria-label="Faire défiler">
     <span>Comprendre</span>
@@ -251,7 +251,7 @@
             <div><span>Destinataire</span><b>u1qh…7x4e</b></div>
             <div><span>Frais</span><b>0,0001 ZEC</b></div>
           </div>
-          <div class="phone-signed">✓ Votre ordinateur a déjà signé sa part</div>
+          <div class="phone-signed">✓ Vérifié par le téléphone lui-même</div>
           <div class="phone-btn">Valider avec Face ID</div>
           <div class="phone-cancel">Refuser</div>
         </div>
@@ -277,12 +277,12 @@
       <div class="step-card reveal" style="--d: 0.15s">
         <span class="step-num">2</span>
         <h3>Demander</h3>
-        <p>Vous préparez un envoi sur l'ordinateur, comme aujourd'hui. Il signe sa part et envoie la demande au téléphone.</p>
+        <p>Vous préparez un envoi sur l'ordinateur, comme aujourd'hui. Il transmet la transaction au téléphone par des QR codes chiffrés.</p>
       </div>
       <div class="step-card reveal" style="--d: 0.25s">
         <span class="step-num">3</span>
         <h3>Valider</h3>
-        <p>Le téléphone affiche l'envoi, vous le validez d'un regard, il signe sa part. Les deux parts forment une signature ordinaire, acceptée par le réseau.</p>
+        <p>Le téléphone vérifie l'envoi lui-même et l'affiche ; vous le validez d'un regard, il signe sa part. L'ordinateur ajoute la sienne : ensemble, elles forment une signature ordinaire, acceptée par le réseau.</p>
       </div>
     </div>
   </div>
@@ -303,7 +303,7 @@
       </div>
       <div class="shield reveal" style="--d: 0.1s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
-        <div><h3>L'implémentation de la Zcash Foundation</h3><p>Ses bibliothèques open source en Rust, utilisées telles quelles par le prototype et vérifiées contre les vecteurs de test officiels.</p></div>
+        <div><h3>L'implémentation de la Zcash Foundation</h3><p>Ses bibliothèques open source en Rust, utilisées telles quelles par frost-zec et le portefeuille, et vérifiées contre les vecteurs de test officiels.</p></div>
       </div>
       <div class="shield reveal" style="--d: 0.15s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9h6l-6 6h6"/></svg></span>
@@ -319,7 +319,7 @@
       </div>
       <div class="shield reveal" style="--d: 0.3s">
         <span class="shield-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>
-        <div><h3>Sans toucher à ce qui marche</h3><p>FROST est développé à part, d'abord dans un prototype indépendant : le portefeuille actuel et sa sauvegarde restent tels quels pendant toute la recherche.</p></div>
+        <div><h3>Sans toucher à ce qui marche</h3><p>Un compte FROST est un compte à part, dans son propre onglet : vos autres comptes et la sauvegarde du portefeuille restent tels quels, et le protocole FROST vit dans sa propre bibliothèque, frost-zec.</p></div>
       </div>
     </div>
   </div>
@@ -329,14 +329,16 @@
 <section class="status" id="frost-status">
   <div class="status-inner">
     <span class="eyebrow"><span class="num">05</span> Où on en est</span>
-    <h2>Conception publiée. <span class="gold">Prototype sur le réseau principal.</span></h2>
+    <h2>Dans le portefeuille. <span class="gold">L'application mobile ensuite.</span></h2>
     <div class="roadmap">
-      <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Conception publiée dans le <a href="frost-livre-blanc.html">livre blanc</a> : appareils, canal d'appairage et vérifications de la transaction</span></div>
-      <div class="step reveal" style="--d: 0.12s"><span class="step-badge done">✓</span><span><strong>Prototype de recherche</strong> (<a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>) : trois dépenses 2 sur 3 sur le réseau principal le 15 octobre 2026, dont deux avec un co-signataire qui vérifie lui-même la transaction avant de signer</span></div>
-      <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">1</span><span><strong>Dans le portefeuille :</strong> appairage par QR code et canal chiffré de bout en bout entre l'ordinateur et le téléphone</span></div>
-      <div class="step next reveal" style="--d: 0.23s"><span class="step-badge next">2</span><span><strong>Format de sauvegarde en ZIP :</strong> <a href="https://github.com/KHADEVS/zips/blob/draft-khadim-aryaethn-frost-member-backup/zips/draft-khadim-aryaethn-frost-member-backup.md" target="_blank" rel="noopener">brouillon public</a>, co-écrit avec aryaethn, avec deux implémentations qui passent ses vecteurs de test</span></div>
-      <div class="step reveal" style="--d: 0.26s"><span class="step-badge todo">3</span><span>Application mobile : afficher la demande, valider d'un regard</span></div>
-      <div class="step reveal" style="--d: 0.33s"><span class="step-badge todo">4</span><span>Audit de sécurité indépendant, avant toute utilisation avec de vrais fonds</span></div>
+      <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Conception publiée dans le <a href="frost-livre-blanc.html">livre blanc</a> (v0.5) : appareils, canal d'appairage, vérifications de la transaction et stockage des parts</span></div>
+      <div class="step reveal" style="--d: 0.1s"><span class="step-badge done">✓</span><span><strong>Prototype de recherche</strong> (<a href="https://github.com/OpenPGP-Wallet/frost-zec" target="_blank" rel="noopener">frost-zec</a>) : trois dépenses 2 sur 3 sur le réseau principal le 15 octobre 2026, dont deux avec un co-signataire qui vérifie lui-même la transaction avant de signer</span></div>
+      <div class="step reveal" style="--d: 0.15s"><span class="step-badge done">✓</span><span><strong>Dans le portefeuille</strong> (Windows, v2.16.0, 11 novembre 2026) : un onglet FROST qui appaire par QR codes via un canal chiffré de bout en bout, crée le compte 2 sur 3 et coordonne les dépenses ; restauration depuis le fichier de sauvegarde depuis la v2.18.0. Pour l'instant, le co-signataire est l'outil de test pour ordinateur de frost-zec</span></div>
+      <div class="step reveal" style="--d: 0.2s"><span class="step-badge done">✓</span><span><strong>Spécification ouverte</strong> (v1.2) et <a href="https://crates.io/crates/frost-zec" target="_blank" rel="noopener">bibliothèque frost-zec</a> publiée sur crates.io ; le 9 novembre 2026, un coffre partagé avec un utilisateur de Zafe a fait des dépenses sur le réseau principal dans les deux sens</span></div>
+      <div class="step next reveal" style="--d: 0.25s"><span class="step-badge next">1</span><span><strong>Format de sauvegarde en ZIP :</strong> ouvert sur zcash/zips (<a href="https://github.com/zcash/zips/pull/1432" target="_blank" rel="noopener">#1432</a>), co-écrit avec aryaethn, avec deux implémentations qui passent ses vecteurs de test</span></div>
+      <div class="step next reveal" style="--d: 0.3s"><span class="step-badge next">2</span><span><strong>Part de l'ordinateur :</strong> une protection qui ne dépend plus du coffre OpenPGP du portefeuille (<a href="frost-livre-blanc.html">livre blanc</a>, section 8)</span></div>
+      <div class="step reveal" style="--d: 0.35s"><span class="step-badge todo">3</span><span>Application mobile, Android puis iPhone : vérifier la demande, valider d'un regard</span></div>
+      <div class="step reveal" style="--d: 0.4s"><span class="step-badge todo">4</span><span>Audit de sécurité indépendant, avant toute utilisation au-delà de petits montants</span></div>
     </div>
     <div class="cta" style="justify-content: center; margin-top: 48px;">
       <a class="btn btn-primary" href="frost-livre-blanc.html">Lire le livre blanc</a>
