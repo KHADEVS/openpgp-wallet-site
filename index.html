@@ -54,7 +54,7 @@
   <a class="dot" href="#sec-swap" title="Échanges" aria-label="Échanges"></a>
   <a class="dot" href="#sec-security" title="Sécurité" aria-label="Sécurité"></a>
   <a class="dot" href="#sec-privacy" title="Vie privée" aria-label="Vie privée"></a>
-  <a class="dot" href="#sec-frost" title="FROST, la suite" aria-label="FROST, la suite"></a>
+  <a class="dot" href="#sec-frost" title="FROST, la signature partagée" aria-label="FROST, la signature partagée"></a>
   <a class="dot" href="#sec-how" title="En pratique" aria-label="En pratique"></a>
   <a class="dot" href="#sec-status" title="Où en est le projet" aria-label="Où en est le projet"></a>
   <a class="dot" href="#sec-faq" title="Questions fréquentes" aria-label="Questions fréquentes"></a>
@@ -397,7 +397,7 @@
         <span class="honest-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span>
         <div>
           <h3>Ce qu'aucun logiciel ne peut garantir</h3>
-          <p>Si un virus contrôle déjà votre ordinateur pendant que vous l'utilisez, il peut épier ce que vous faites. C'est vrai pour tous les portefeuilles logiciels. Aujourd'hui, la parade est un Ledger ou un Trezor : la clé ne quitte jamais l'appareil, et vous vérifiez sur son propre écran. Demain, ce sera <strong>FROST</strong> : la signature partagée entre votre ordinateur et votre téléphone, pour qu'un ordinateur infecté ne puisse plus rien envoyer seul.</p>
+          <p>Si un virus contrôle déjà votre ordinateur pendant que vous l'utilisez, il peut épier ce que vous faites. C'est vrai pour tous les portefeuilles logiciels. Aujourd'hui, la parade est un Ledger ou un Trezor : la clé ne quitte jamais l'appareil, et vous vérifiez sur son propre écran. Pour le Zcash protégé, ce projet apporte aussi <strong>FROST</strong> : la signature partagée entre votre ordinateur et un second appareil, pour qu'un ordinateur infecté ne puisse plus rien envoyer seul. Il est dans le portefeuille depuis la v2.16 ; l'application pour téléphone qui servira de second appareil est la prochaine étape.</p>
         </div>
         <div class="honest-links">
           <a class="deep-link accent" href="#sec-frost">Découvrir FROST →</a>
@@ -484,14 +484,15 @@
   <section class="feature frost-feature" id="sec-frost">
     <div class="feature-inner">
       <div class="feature-copy">
-        <span class="eyebrow"><span class="num">08</span> <span class="new">La suite</span> · FROST</span>
-        <h2>Demain, la signature aussi sera divisée.</h2>
-        <p class="lead">Aujourd'hui, la sauvegarde est découpée en trois morceaux. Avec FROST, chaque envoi sera signé à plusieurs : votre ordinateur et votre téléphone produisent chacun leur part de signature, sans jamais réunir la clé. Un virus sur l'ordinateur ne suffira plus pour déplacer vos fonds.</p>
+        <span class="eyebrow"><span class="num">08</span> <span class="new">Nouveau</span> · FROST</span>
+        <h2>Pour le Zcash protégé, la signature aussi est divisée.</h2>
+        <p class="lead">La sauvegarde est déjà découpée en trois morceaux. Avec un compte FROST, chaque envoi est signé à plusieurs : votre ordinateur et un second appareil produisent chacun leur part de signature, sans jamais réunir la clé. Un virus sur l'ordinateur ne suffit plus pour déplacer les fonds de ce compte.</p>
         <ul class="ticks">
-          <li><strong>La clé entière n'existe plus nulle part</strong>, ni sur l'ordinateur ni sur le téléphone, même au moment de signer.</li>
-          <li>Votre téléphone affiche le destinataire et le montant, et vous validez d'un regard : un écran de confiance, comme avec un portefeuille matériel, sur l'appareil que vous avez déjà en poche.</li>
-          <li>Un protocole public, normalisé par l'IETF (RFC 9591), dont la <strong>Zcash Foundation</strong> développe une implémentation open source en Rust : nous la réutiliserons plutôt que de réinventer la cryptographie.</li>
-          <li>Prévu d'abord pour Zcash protégé, Solana, NEAR, Stellar et Bitcoin (adresses Taproot).</li>
+          <li><strong>La clé entière n'existe plus nulle part</strong>, ni sur l'ordinateur ni sur le second appareil, même au moment de signer.</li>
+          <li>Le second appareil vérifie lui-même le destinataire, le montant et les frais avant de signer. Avec l'application pour téléphone, prochaine étape, ce sera un écran de confiance sur l'appareil que vous avez déjà en poche.</li>
+          <li>Un protocole public, normalisé par l'IETF (RFC 9591), dont la <strong>Zcash Foundation</strong> développe une implémentation open source en Rust : nous la réutilisons plutôt que de réinventer la cryptographie.</li>
+          <li>Dans le portefeuille Windows depuis la v2.16, avec la restauration depuis la sauvegarde depuis la v2.18. Pour l'instant, le second appareil est l'outil de test pour ordinateur de frost-zec. Non audité : de petits montants seulement.</li>
+          <li>Solana, NEAR, Stellar et Bitcoin (adresses Taproot) pourraient suivre plus tard.</li>
         </ul>
         <div class="cta"><a class="btn btn-primary" href="frost.html">Découvrir FROST</a></div>
       </div>
@@ -564,7 +565,7 @@
         <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Cœur cryptographique (sauvegarde, chiffrement, signatures) : terminé</span></div>
         <div class="step reveal" style="--d: 0.08s"><span class="step-badge done">✓</span><span>Code source publié sous licence MIT : <a href="https://github.com/OpenPGP-Wallet/openpgp-wallet" target="_blank" rel="noopener">sur GitHub</a>, ouvert à la relecture de tous</span></div>
         <div class="step reveal" style="--d: 0.12s"><span class="step-badge doing">●</span><span>Application Windows complète (envois, échanges, staking, actions tokenisées, Ledger et Trezor, WalletConnect, Monero, Zcash protégé) : en finition</span></div>
-        <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">→</span><span><strong>Prochaine grande étape : <a href="frost.html">FROST</a></strong>, la signature partagée entre votre ordinateur et votre téléphone, avec l'application mobile qui l'accompagne : un prototype de recherche signe déjà sur le réseau principal, intégration au portefeuille à venir</span></div>
+        <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">→</span><span><strong>Prochaine grande étape : l'application mobile</strong>, second appareil pour <a href="frost.html">FROST</a>. FROST est déjà dans le portefeuille depuis la v2.16 pour le Zcash protégé, avec pour l'instant un co-signataire de test sur ordinateur</span></div>
         <div class="step reveal" style="--d: 0.26s"><span class="step-badge todo">○</span><span>Audit de sécurité indépendant et signature du logiciel : pas encore faits</span></div>
         <div class="step reveal" style="--d: 0.33s"><span class="step-badge todo">○</span><span>Version publique recommandée pour de vrais fonds : après l'audit et la signature du logiciel</span></div>
       </div>
@@ -605,7 +606,7 @@
         </details>
         <details>
           <summary>C'est quoi, FROST, en deux mots ?</summary>
-          <p>Une façon de signer à plusieurs. Aujourd'hui, votre clé est reconstituée un court instant sur l'ordinateur pour signer un envoi. Avec FROST, l'ordinateur et le téléphone signent chacun leur part et la clé entière n'existe jamais : pour voler vos fonds, il faudrait pirater les deux appareils en même temps.</p>
+          <p>Une façon de signer à plusieurs. Pour un compte ordinaire, votre clé est reconstituée un court instant sur l'ordinateur pour signer un envoi. Avec un compte FROST (Zcash protégé, depuis la v2.16), l'ordinateur et un second appareil signent chacun leur part et la clé entière n'existe jamais : pour voler les fonds, il faudrait pirater les deux appareils en même temps.</p>
         </details>
         <details>
           <summary>Pourquoi seulement Windows ?</summary>

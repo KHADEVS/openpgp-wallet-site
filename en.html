@@ -54,7 +54,7 @@
   <a class="dot" href="#sec-swap" title="Swaps" aria-label="Swaps"></a>
   <a class="dot" href="#sec-security" title="Security" aria-label="Security"></a>
   <a class="dot" href="#sec-privacy" title="Privacy" aria-label="Privacy"></a>
-  <a class="dot" href="#sec-frost" title="FROST, what's next" aria-label="FROST, what's next"></a>
+  <a class="dot" href="#sec-frost" title="FROST, shared signing" aria-label="FROST, shared signing"></a>
   <a class="dot" href="#sec-how" title="In practice" aria-label="In practice"></a>
   <a class="dot" href="#sec-status" title="Project status" aria-label="Project status"></a>
   <a class="dot" href="#sec-faq" title="FAQ" aria-label="FAQ"></a>
@@ -397,7 +397,7 @@
         <span class="honest-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span>
         <div>
           <h3>What no software can guarantee</h3>
-          <p>If malware already controls your computer while you use it, it can spy on what you do. That's true of every software wallet. Today, the answer is a Ledger or a Trezor: the key never leaves the device, and you check on its own screen. Tomorrow, it will be <strong>FROST</strong>: a signature shared between your computer and your phone, so an infected computer can no longer send anything on its own.</p>
+          <p>If malware already controls your computer while you use it, it can spy on what you do. That's true of every software wallet. Today, the answer is a Ledger or a Trezor: the key never leaves the device, and you check on its own screen. For shielded Zcash, this project also offers <strong>FROST</strong>: a signature shared between your computer and a second device, so an infected computer can no longer send anything on its own. It has been in the wallet since v2.16; the phone app that will serve as the second device is the next step.</p>
         </div>
         <div class="honest-links">
           <a class="deep-link accent" href="#sec-frost">Discover FROST →</a>
@@ -484,14 +484,15 @@
   <section class="feature frost-feature" id="sec-frost">
     <div class="feature-inner">
       <div class="feature-copy">
-        <span class="eyebrow"><span class="num">08</span> <span class="new">What's next</span> · FROST</span>
-        <h2>Tomorrow, the signature will be split too.</h2>
-        <p class="lead">Today, the backup is split into three pieces. With FROST, every send will be signed jointly: your computer and your phone each produce their share of the signature, without ever bringing the key together. Malware on the computer will no longer be enough to move your funds.</p>
+        <span class="eyebrow"><span class="num">08</span> <span class="new">New</span> · FROST</span>
+        <h2>For shielded Zcash, the signature is split too.</h2>
+        <p class="lead">The backup is already split into three pieces. With a FROST account, every send is signed jointly: your computer and a second device each produce their share of the signature, without ever bringing the key together. Malware on the computer is no longer enough to move that account's funds.</p>
         <ul class="ticks">
-          <li><strong>The whole key no longer exists anywhere</strong>, neither on the computer nor on the phone, not even while signing.</li>
-          <li>Your phone shows the recipient and the amount, and you approve at a glance: a trusted screen, as with a hardware wallet, on the device already in your pocket.</li>
-          <li>A public protocol, standardized by the IETF (RFC 9591), with an open-source Rust implementation developed by the <strong>Zcash Foundation</strong>: we'll reuse it rather than reinvent cryptography.</li>
-          <li>Planned first for shielded Zcash, Solana, NEAR, Stellar and Bitcoin (Taproot addresses).</li>
+          <li><strong>The whole key no longer exists anywhere</strong>, neither on the computer nor on the second device, not even while signing.</li>
+          <li>The second device checks the recipient, the amount and the fee itself before signing. With the phone app, the next step, that becomes a trusted screen on the device already in your pocket.</li>
+          <li>A public protocol, standardized by the IETF (RFC 9591), with an open-source Rust implementation developed by the <strong>Zcash Foundation</strong>: we reuse it rather than reinvent cryptography.</li>
+          <li>In the Windows wallet since v2.16, with recovery from the backup since v2.18. For now the second device is the desktop test tool of frost-zec. Not audited: small amounts only.</li>
+          <li>Solana, NEAR, Stellar and Bitcoin (Taproot addresses) could follow later.</li>
         </ul>
         <div class="cta"><a class="btn btn-primary" href="frost-en.html">Discover FROST</a></div>
       </div>
@@ -564,7 +565,7 @@
         <div class="step reveal" style="--d: 0.05s"><span class="step-badge done">✓</span><span>Cryptographic core (backup, encryption, signatures): done</span></div>
         <div class="step reveal" style="--d: 0.08s"><span class="step-badge done">✓</span><span>Source code published under the MIT license: <a href="https://github.com/OpenPGP-Wallet/openpgp-wallet" target="_blank" rel="noopener">on GitHub</a>, open for anyone to review</span></div>
         <div class="step reveal" style="--d: 0.12s"><span class="step-badge doing">●</span><span>Complete Windows app (sends, swaps, staking, tokenized stocks, Ledger and Trezor, WalletConnect, Monero, shielded Zcash): being polished</span></div>
-        <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">→</span><span><strong>Next big step: <a href="frost-en.html">FROST</a></strong>, a signature shared between your computer and your phone, with the mobile app that goes with it: a research prototype already signs on mainnet, wallet integration ahead</span></div>
+        <div class="step next reveal" style="--d: 0.19s"><span class="step-badge next">→</span><span><strong>Next big step: the mobile app</strong>, the second device for <a href="frost-en.html">FROST</a>. FROST has been in the wallet since v2.16 for shielded Zcash, for now with a desktop test co-signer</span></div>
         <div class="step reveal" style="--d: 0.26s"><span class="step-badge todo">○</span><span>Independent security audit and code signing: not done yet</span></div>
         <div class="step reveal" style="--d: 0.33s"><span class="step-badge todo">○</span><span>Public release recommended for real funds: once the audit and code signing are done</span></div>
       </div>
@@ -605,7 +606,7 @@
         </details>
         <details>
           <summary>What is FROST, in a nutshell?</summary>
-          <p>A way of signing jointly. Today, your key is rebuilt for a brief moment on the computer to sign a send. With FROST, the computer and the phone each sign their share and the whole key never exists: to steal your funds, someone would have to hack both devices at the same time.</p>
+          <p>A way of signing jointly. For an ordinary account, your key is rebuilt for a brief moment on the computer to sign a send. With a FROST account (shielded Zcash, since v2.16), the computer and a second device each sign their share and the whole key never exists: to steal the funds, someone would have to hack both devices at the same time.</p>
         </details>
         <details>
           <summary>Why only Windows?</summary>
